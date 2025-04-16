@@ -1,0 +1,27 @@
+{
+  "name": "@use-lynx/types-check",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": ["types"],
+  "license": "Apache-2.0",
+  "author": "Winder",
+  "types":"types/index.d.ts",
+  "main": "types/index.d.ts",
+  "files": [
+    "types/"
+  ],
+  "scripts": {
+    "test": "vitest --typecheck"
+  },
+  "devDependencies": {
+    "vitest": "2.1.9",
+    "typescript": "4.9.4",
+    "pnpm": "7.33.6"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts"
+    }
+  }
+
+}
