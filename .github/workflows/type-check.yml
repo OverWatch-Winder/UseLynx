@@ -12,11 +12,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.33.6
       - name: Install dependencies
         run:
           cd $GITHUB_WORKSPACE/js_libs
-          npm install
+          pnpm install
       - name: Run tests
         run:
           cd $GITHUB_WORKSPACE/js_libs/types-check
-          npm run test
+          pnpm run test
