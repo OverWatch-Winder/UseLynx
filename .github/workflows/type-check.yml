@@ -16,10 +16,10 @@ jobs:
         with:
           version: 7.33.6
       - name: Install dependencies
-        run:
+        run: |
           cd $GITHUB_WORKSPACE/js_libs
           pnpm install
       - name: Run tests
-        run:
+        run: |
           cd $GITHUB_WORKSPACE/js_libs/types-check
           pnpm run test
