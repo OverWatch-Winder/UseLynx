@@ -21,5 +21,5 @@ jobs:
           pnpm install
       - name: Run Publish
         run: |
-          cd $GITHUB_WORKSPACE/js_libs
-          ./diff_and_publish.sh
+          cd $GITHUB_WORKSPACE
+          ./js_libs/diff_and_publish.sh
