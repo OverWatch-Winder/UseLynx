@@ -1,0 +1,25 @@
+name: Types Publish
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.33.6
+      - name: Install dependencies
+        run: |
+          cd $GITHUB_WORKSPACE/js_libs
+          pnpm install
+      - name: Run Publish
+        run: |
+          cd $GITHUB_WORKSPACE/js_libs
+          ./diff_and_publish.sh
