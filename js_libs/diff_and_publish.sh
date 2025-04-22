@@ -15,7 +15,7 @@ typesDir=$(relativePath "$projectRootPath/js_libs/types-check")
 
 echo "typesDir: $typesDir"
 
-typesSrcChanged=$(git diff --name-only HEAD^ -- "$typesDir/types")
+typesSrcChanged=$(git diff --name-only HEAD~1 -- "$typesDir/types")
 
 echo "typesSrcChanged: $typesSrcChanged"
 
